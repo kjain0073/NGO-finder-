@@ -51,7 +51,7 @@
 		pincode: 345678
 	},
 	status: true,
-	claim: 'Claimed'
+	claim: 'View Profile'
 },
 {
 	id:4,
@@ -87,6 +87,6 @@
 		pincode: 567890
 	},
 	status: true,
-	claim: 'Claimed'
+	claim: 'View Profile'
 }
 ]

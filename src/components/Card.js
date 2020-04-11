@@ -19,9 +19,10 @@ const Card=(ngos)=> {
 				     <h4 class="b">District: </h4><p>{ngos.address_district}</p>
 				     <h4 class="b">State: </h4><p>{ngos.address_state}</p>
 				     <h4 class="b">Pincode:</h4><p>{ngos.address_pincode}</p>
-				     <Button variant="contained" color="primary" disabled= {ngos.status} >
-					   {ngos.claim}
-					 </Button>
+					 	<Button variant="contained" 
+					 	color="primary" >
+						   {ngos.claim}
+						 </Button>
 				  </div>
 				</article>
 		</div>

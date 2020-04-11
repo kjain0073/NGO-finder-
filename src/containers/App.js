@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import { ngos } from '../ngos';
+import FormContainer from './FormContainer';
 import './App.css';
 
 class App extends Component{
@@ -26,7 +27,7 @@ class App extends Component{
 
 	render() {
 		const { ngos,searchfield } =this.state;
-		const filteredRobots=ngos.filter(ngo =>{
+		const filteredNGOs=ngos.filter(ngo =>{
 			return (ngo.name.toLowerCase().includes(searchfield.toLowerCase()) 
 				|| ngo.email.toLowerCase().includes(searchfield.toLowerCase()) 
 				|| ngo.address.city.toLowerCase().includes(searchfield.toLowerCase())
@@ -49,8 +50,12 @@ class App extends Component{
 			    </h2>
 				<SearchBox searchChange={this.onSearchChange} />
 				<Scroll>
-					<CardList ngos={filteredRobots} />
+					<CardList ngos={filteredNGOs} />
 				</Scroll>
+				<div className="col-md-6 georgia ">
+			        <h2 className="f2"> Sample Form Container </h2>
+			        <FormContainer />
+		      	</div>
 			</div>
 		);
 	  }		
